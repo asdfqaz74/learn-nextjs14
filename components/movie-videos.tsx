@@ -1,7 +1,7 @@
-import { API_URL } from "../app/(home)/page";
+
 
 async function getVideos(id: string) {
-    const response = await fetch(`${API_URL}/${id}/videos`)
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/${id}/videos`)
     return response.json();
 }
 
